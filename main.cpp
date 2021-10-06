@@ -39,6 +39,9 @@ int main()
 }
 */
 
+
+/*
+// ------- Vector ------- Вектор
 #include <iostream>
 #include <vector>
 // д/з переробити на вектори
@@ -70,3 +73,58 @@ for (auto const &element: zp)
 //       std::cout << "Zp = " << pPeople[i].zp << std::endl;
 //   }
  }
+*/
+
+//  ------Class work ---- 06/10/2021
+//  ------- Vector ------- Вектор
+
+#include <iostream>
+#include <vector>
+
+struct People
+{
+    People()
+    {
+        age =0;
+        zp = 0;
+    };
+
+    std::string name;
+    std::string surname;
+    int age;
+    int zp;
+};
+int main()
+{
+    People taras;
+    taras.age = 32;
+    taras.name = "Taras";
+    taras.surname = "Lepa";
+    taras.zp = 565463;
+
+    People orest;
+    orest.age = 39;
+    orest.name = "Orest";
+    orest.surname = "Guy";
+    orest.zp = 465463;
+
+    People natalia;
+    natalia.age = 20;
+    natalia.name = "Nataliia";
+    natalia.surname = "Martynovych";
+    natalia.zp = 8795463;
+
+    std::vector <People> students;
+    students.push_back(taras);
+     students.push_back(natalia);
+      students.push_back(orest);
+
+for (auto const &element: students)
+   {
+     std::cout <<  element.name << std::endl;
+     std::cout <<  element.surname << std::endl;
+     std::cout <<  element.age << std::endl;
+     std::cout <<  element.zp << "\n" << std::endl;
+    }
+}
+
